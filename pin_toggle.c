@@ -26,7 +26,9 @@ int main(void)
 
     while (1) {
 	PORTC |= 1 << PC0;      // Set PC0 to a 1
+	_delay_ms(500);
 	PORTC &= ~(1 << PC0);   // Set PC0 to a 0
+	_delay_ms(500)
     }
 
     return 0;   /* never reached */
