@@ -1,5 +1,6 @@
 DEVICE     = atmega328p
 CLOCK      = 7373800
+PROGRAMMER = -c usbtiny -P usb
 OBJECTS    = at328-0.o
 FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0xe0:m
 
