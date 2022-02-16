@@ -19,16 +19,21 @@
 *************************************************************/
 
 #include <avr/io.h>
+#include <avr/delay.h>
+#include "pin_toggle.h"
+
 
 int main(void)
 {
-    DDRC = 0x0;          // Set PORTC bit 0 for output
-    
+    DDRC = 0x3f;        // Set PORTC 0-5 to output
+    DDRB = 0xbf;        // Set PORTB 0-5 & 7 to output
+    DDRD = 0xff;        // Set PORTD 0-7 to output
+
     while (1) {
-	PORTC |= 1 << PC0;      // Set PC0 to a 1
-	_delay_ms(500);
-	PORTC &= ~(1 << PC0);   // Set PC0 to a 0
-	_delay_ms(500)
+	// PORTC
+    checkB();
+    //checkC();
+    //checkD();
     }
 
     return 0;   /* never reached */
