@@ -1,7 +1,7 @@
 DEVICE     = atmega328p
 CLOCK      = 7373800
 PROGRAMMER = -c usbtiny -P usb
-OBJECTS    = at328-0.o
+OBJECTS    = pin_toggle.o
 FUSES      = -U hfuse:w:0xd9:m -U lfuse:w:0xe0:m
 
 # Fuse Low Byte = 0xe0   Fuse High Byte = 0xd9   Fuse Extended Byte = 0xff
