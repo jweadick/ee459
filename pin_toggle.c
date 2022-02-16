@@ -22,8 +22,8 @@
 
 int main(void)
 {
-    DDRC |= 1 << DDC0;          // Set PORTC bit 0 for output
-
+    DDRC = 0x0;          // Set PORTC bit 0 for output
+    
     while (1) {
 	PORTC |= 1 << PC0;      // Set PC0 to a 1
 	_delay_ms(500);
