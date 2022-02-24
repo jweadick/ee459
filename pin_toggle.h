@@ -101,11 +101,6 @@ void checkD(){
 	PORTD &= ~(1 << PD5);   // Set PD5 to a 0
 	_delay_us(1);
 
-    PORTD |= 1 << PD5;      // Set PD5 to a 1
-	_delay_us(1);
-	PORTD &= ~(1 << PD5);   // Set PD5 to a 0
-	_delay_us(1);
-
     PORTD |= 1 << PD6;      // Set PD6 to a 1
 	_delay_us(1);
 	PORTD &= ~(1 << PD6);   // Set PD6 to a 0
