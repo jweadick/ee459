@@ -57,8 +57,10 @@ int main(void) {
     // lcd_stringout(str4);        // Print string on line 4
 	
 	serial_init(MYUBRR);		// Initialize the Serial Port
-
+	char in;
     while (1) {                 // Loop forever
+    	in = serial_in();
+	serial_out(in);
     }
 
     return 0;   /* never reached */
